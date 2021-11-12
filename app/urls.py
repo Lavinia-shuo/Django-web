@@ -14,8 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include #include是新加的，用来引入第一个页面的url
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+  path('', include('apgame.urls')), #第一个参数为空默认端口8000为game页面
+  path('admin/', admin.site.urls),
 ]
