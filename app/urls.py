@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include #include是新加的，用来引入第一个页面的url
 
 urlpatterns = [
-  #path('', include('apgame.urls')), #第一个参数为空默认端口8000为game页面
+  path('', include('apgame.urls.index')), #第一个参数为空默认端口8000为game页面
   path('admin/', admin.site.urls),
 ]

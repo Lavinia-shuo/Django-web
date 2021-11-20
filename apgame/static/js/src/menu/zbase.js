@@ -1,22 +1,3 @@
-class AcGamePlayground{
-            constructor(root){
-                this.root=root;
-                this.$playground=$(`<div>游戏界面</div>`);
-                this.hide();
-                this.root.$ac_game.append(this.$playground);
-                this.start();
-            }
-            start(){
-            }
-            show(){
-            this.$playground.show();
-            }
-            hide(){
-            this.$playground.hide();
-        }
-}
-
-
 class AcGameMenu {
     constructor(root) {
         this.root = root;
@@ -71,17 +52,4 @@ class AcGameMenu {
         this.$menu.hide();
     }
 }
-
-class AcGame{
-        constructor(id){
-            this.id=id; //**这个id是前端传进来的div的id，也就是ac_game_12345678**
-            this.$ac_game=$('#' + id); //**我们要找这个div中的id的话，jquery中要使用('#'+id).**
-            this.menu=new AcGameMenu(this); //**创建一个菜单，赋值给menu.**
-            this.playground=new AcGamePlayground(this);
-            this.start();
-        }
-        start(){
-        }
-}
-
 
