@@ -398,7 +398,7 @@ class AcGamePlayground {
         this.root = root;
         this.$playground = $(`<div class = "ac-game-playground" > < / div>`);
 
-       // this.hide();
+        // this.hide();
         this.root.$ac_game.append(this.$playground);
         this.width = this.$playground.width();
         this.height = this.$playground.height();
@@ -420,6 +420,16 @@ class AcGamePlayground {
 
     start() {
     }
+
+    show() {  // 打开playground界面
+        this.$playground.show();
+    }
+
+    hide() {  // 关闭playground界面
+        this.$playground.hide();
+    }
+}
+
 export class AcGame{
         constructor(id){
             this.id=id; //**这个id是前端传进来的div的id，也就是ac_game_12345678**
