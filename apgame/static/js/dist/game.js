@@ -53,7 +53,7 @@ class AcGameMenu {
     }
 }
 
-let AC_GAME_OBJECTS = [];
+let AC_GAME_OBJECTS = [];//数组里存的是AcGameObject对象
 
 class AcGameObject {
     constructor() {
@@ -404,17 +404,17 @@ class AcGamePlayground {
         this.height = this.$playground.height();
         this.game_map = new GameMap(this);
         this.players = [];
-        this.players.push(new Player(this, this.width / 2, this.height / 2, this.height * 0.05, "white", this.height * 0.15, true));
+        this.players.push(new Player(this, this.width / 2, this.height / 2, this.height * 0.05, "pink", this.height * 0.3, true));
 
         for (let i = 0; i < 5; i ++ ) {
-            this.players.push(new Player(this, this.width / 2, this.height / 2, this.height * 0.05, this.get_random_color(), this.height * 0.15, false));
+            this.players.push(new Player(this, this.width / 2, this.height / 2, this.height * 0.05, this.get_random_color(), this.height * 0.3, false));
         }
 
         this.start();
     }
 
     get_random_color() {
-        let colors = ["blue", "red", "pink", "grey", "green"];
+        let colors = ["blue", "red", "white", "grey", "green"];
         return colors[Math.floor(Math.random() * 5)];
     }
 
