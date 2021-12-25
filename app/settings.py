@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-!ki=sys%(*3u0wnpf0*_i0o#27&rcf!ty_8skpzgk=zf3^z^18
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["139.155.69.105"]
+ALLOWED_HOSTS = ["139.155.69.105", "app622.acapp.acwing.com.cn"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'apgame.apps.ApgameConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,3 +127,14 @@ MEDIA_URL='/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ASGI_APPLICATION = 'app.asgi.application'
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
+ROOM_CAPACITY = 3
