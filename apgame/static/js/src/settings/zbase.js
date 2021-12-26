@@ -135,7 +135,6 @@ class Settings {
                 password: password,
             },
             success: function(resp) {
-                console.log(resp);
                 if (resp.result === "success") {
                     location.reload();
                 } else {
@@ -161,7 +160,6 @@ class Settings {
                 password_confirm: password_confirm,
             },
             success: function(resp) {
-                console.log(resp);
                 if (resp.result === "success") {
                     location.reload();  // 刷新页面
                 } else {
@@ -178,7 +176,6 @@ class Settings {
             url: "https://app622.acapp.acwing.com.cn/settings/logout/",
             type: "GET",
             success: function(resp) {
-                console.log(resp);
                 if (resp.result === "success") {
                     location.reload();
                 }
@@ -206,7 +203,6 @@ class Settings {
                 platform: outer.platform,
             },
             success: function(resp) {
-                console.log(resp);
                 if (resp.result === "success") {
                     outer.username = resp.username;
                     outer.photo = resp.photo;
