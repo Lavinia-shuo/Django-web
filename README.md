@@ -1,10 +1,12 @@
 ## **Online Mobile Game**
 
-Django框架实战
+**项目地址：https://app622.acapp.acwing.com.cn/**
 
 ------
 
 ### Introduction
+
+Django框架实战
 
 *A MOBA game on web, each game supports multi players battling together. The game provides user login system,*
 
@@ -41,5 +43,3 @@ OS: Ubuntu
 -  通过 WebSocket 网络协议，实现在线聊天室、实时移动等功能；
 - 使用 Redis 存储实时对局信息，确保战绩实时性；
 -  使用 Django 默认数据库 SQLite 存储用户信息，满足轻量存储需求。
-
-
