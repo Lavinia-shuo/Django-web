@@ -1,6 +1,6 @@
 ## **Online Mobile Game**
 
-**项目地址：https://app622.acapp.acwing.com.cn/**
+**项目地址：https://app622.acapp.acwing.com.cn/** (服务器修复中）
 
 ------
 
